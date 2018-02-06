@@ -1,0 +1,9 @@
+{
+    "extends": [
+        "tslint-react"
+    ],
+    "rules": {
+        "indent": [true, 4],
+        "jsx-curly-spacing": "never"
+    }
+}
