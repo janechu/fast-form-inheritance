@@ -5,7 +5,7 @@ A React site starter in typescript, using JSS and webpack.
 - `npm i`
 
 ## Running local environment
-- `npm run dev-server`
+- `npm start`
 
 ## Building the site for production
 - `npm run build`

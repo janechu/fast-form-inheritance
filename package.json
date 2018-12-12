@@ -4,7 +4,7 @@
   "description": "A React site starter in typescript, using JSS and webpack.",
   "main": "index.js",
   "scripts": {
-    "dev-server": "webpack-dev-server --progress",
+    "start": "webpack-dev-server --progress",
     "build": "webpack --progress"
   },
   "repository": {
