@@ -1,0 +1,49 @@
+{
+    "title": "Some example",
+    "type": "object",
+    "properties": {
+        "identifier": {
+            "title": "Identifier",
+            "type": "string",
+            "formPluginId": "example/identifier"
+        },
+        "children": {
+            "title": "Children",
+            "type": "array",
+            "items": {
+                "title": "Child item",
+                "formPluginId": "example/children",
+                "oneOf": [
+                    {
+                        "description": "Selection A",
+                        "type": "object",
+                        "properties": {
+                            "foo": {
+                                "title": "Foo",
+                                "type": "boolean"
+                            },
+                            "bar": {
+                                "title": "Bar",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "description": "Selection B",
+                        "type": "object",
+                        "properties": {
+                            "alpha": {
+                                "title": "Alpha",
+                                "type": "number"
+                            },
+                            "beta": {
+                                "title": "Beta",
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

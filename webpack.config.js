@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'inline-source-map',
-    entry: './src/app.tsx',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve('./www'),
         publicPath: '/',

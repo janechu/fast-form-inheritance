@@ -1,7 +1,24 @@
 {
     "compilerOptions": {
-        "sourceMap": true,
-        "target": "es5",
-        "jsx": "react"
-    }
+        "lib": [
+            "dom",
+            "es2017"
+        ],
+        "moduleResolution": "node",
+        "module": "ES6",
+        "target": "ES6",
+        "baseUrl": ".",
+        "declaration": true,
+        "jsx": "react",
+        "outDir": "./dist",
+        "resolveJsonModule": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "**/*.spec.tsx"
+    ]
 }
