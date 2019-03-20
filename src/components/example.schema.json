@@ -44,6 +44,26 @@
                     }
                 ]
             }
+        },
+        "nestedObject": {
+            "title": "Nested object",
+            "type": "object",
+            "properties": {
+                "children": {
+                    "title": "Deep children",
+                    "type": "array",
+                    "items": {
+                        "title": "Deep child item",
+                        "type": "object",
+                        "properties": {
+                            "foo": {
+                                "title": "Foo",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
