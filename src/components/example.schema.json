@@ -64,6 +64,11 @@
                     }
                 }
             }
+        },
+        "inheritedProperty": {
+            "title": "An initially inherited property",
+            "type": "boolean",
+            "formPluginId": "example/inheritedProperty"
         }
     }
 }

@@ -1,8 +1,9 @@
 import * as React from 'react';
-import Form from "./form-generator";
+import { Form, FormPlugin, FormPluginProps } from "@microsoft/fast-tooling-react";
 import * as exampleSchema from "./components/example.schema.json";
 import ExampleFormPlugin from './components/example.plugin';
 import ExampleIdentifierFormPlugin from "./components/example-identifier.plugin";
+import ExampleInheritedPropertyPlugin from "./components/example-inherited-property.plugin";
 
 export interface AppState {
     schema: any;
@@ -30,7 +31,7 @@ class App extends React.Component<{}, AppState> {
                     onChange={this.handleDataOnChange}
                     onSchemaChange={this.handleSchemaOnChange}
                     location={{onChange: this.handleDataLocationUpdate, dataLocation: this.state.dataLocation}}
-                    plugins={[new ExampleFormPlugin({id: "example/children"}), new ExampleIdentifierFormPlugin({id: "example/identifier"})]}
+                    plugins={this.getPlugins()}
                 />
             </div>
         );
@@ -54,6 +55,14 @@ class App extends React.Component<{}, AppState> {
         this.setState({
             dataLocation
         });
+    }
+
+    private getPlugins(): FormPlugin<FormPluginProps>[] {
+        return [
+            new ExampleFormPlugin({id: "example/children"}),
+            new ExampleIdentifierFormPlugin({id: "example/identifier"}),
+            new ExampleInheritedPropertyPlugin({id: "example/inheritedProperty"})
+        ];
     }
 }
 

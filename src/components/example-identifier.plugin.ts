@@ -1,4 +1,4 @@
-import { FormPlugin, FormPluginProps } from "../form-generator";
+import { FormPlugin, FormPluginProps } from "@microsoft/fast-tooling-react";
 
 export default class ExampleIdentifierFormPlugin extends FormPlugin<FormPluginProps> {
     public resolver(schema: any, data: any): any {
